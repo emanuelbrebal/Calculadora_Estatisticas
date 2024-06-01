@@ -31,7 +31,7 @@ while(True):
     match(opc):
         case 1: #média
             for i in range (len(array_numeros)):
-                soma += array_numeros[i]
+                soma += float(array_numeros[i])
             print(f"A média dos valores informados é: {soma/len(array_numeros)}")
         case 2: #mediana
             array_numeros.sort()
@@ -42,12 +42,13 @@ while(True):
             
             elif resto == 0:
                posicao = round(len(array_numeros)/2)
-               mediana = (array_numeros[posicao] + array_numeros[posicao-1])/2
+               mediana = (float(array_numeros[posicao]) + float(array_numeros[posicao-1]))/2
                  
-            print(f"A mediana padrão dos valores inseridos é: {mediana}")
+            print(f"A mediana dos valores inseridos é: {mediana}")
 
         case 3: #moda
             moda_Count = []
+            moda_Count.clear()
             for i in range(len(array_numeros)):
                 controle = array_numeros[i]
                 moda_M = array_numeros.count(controle)
@@ -60,7 +61,7 @@ while(True):
                     moda = array_numeros[i]
 
 
-            print(f"A moda padrão dos valores inseridos é: {moda}")
+            print(f"A moda dos valores inseridos é: {moda}")
         
         case 4: #desvio padrão
             soma = 0
